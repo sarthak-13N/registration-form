@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://www.wallpapertip.com/wmimgs/83-838296_web-designer-professional-website-background-images.jpg');
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #120909;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: antiquewhite;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #2011fd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .gender-group,
+        .qualification-group {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+
+        .button1,
+        .button2 {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Optional transition effect */
+        }
+
+        .button1 {
+            background-color: #070bfc; /* Green */
+            color: white;
+            margin-right: 10px;
+        }
+
+        .button2 {
+            background-color: #070bfc; /* Blue */
+            color: white;
+            margin-left: 10px;
+        }
+
+        .button1:hover {
+            background-color: #1cba00c7; /* Darker green on hover */
+        }
+
+        .button2:hover {
+            background-color: #ff0000; /* Darker blue on hover */
+        }
+        
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <script>
+        function showAlert(event) {
+            event.preventDefault(); // Prevent form submission
+            alert("Submission Successful!");
+            // After showing alert, you can submit the form using JavaScript if needed
+            // Uncomment the line below if you want to submit the form after the alert
+            // event.target.submit();
+        }
+    </script>
+</head>
+
+<body><br><br>
+    <form action="" method="get" onsubmit="showAlert(event)">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+
+        <label>Gender:</label>
+        <div class="gender-group">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+
+        <!-- <label>Date of Birth:</label>
+        <select name="day">
+            <option value="">Select Day</option>
+            <option value="">11</option>
+            <option value="">12</option>
+            <option value="">13</option>
+            <option value="">14</option>
+           
+        </select>
+        <select name="month">
+            <option value="">Select Month</option>
+            <option value="">jan</option>
+            <option value="">jun</option>
+            <option value="">Dec</option>
+            
+        </select>
+        <select name="year">
+            <option value="">Select Year</option>
+            <option value="">2002</option>
+            <option value="">2003</option>
+            <option value="">2004</option>
+
+           
+        </select> -->
+
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" name="birthday">
+        
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address">
+
+        <label>Nationality:</label>
+        <select name="nationality">
+            <option value="">Select Nationality</option>
+            <option value="Indian">Indian</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Russian">Russian</option>
+            <option value="Japan">Japan</option>
+        </select>
+
+        <label>Qualification:</label>
+        <div class="qualification-group">
+            <label><input type="checkbox" name="qualification" value="SSC"> SSC</label>
+            <label><input type="checkbox" name="qualification" value="HSC"> HSC</label>
+            <label><input type="checkbox" name="qualification" value="UG"> UG</label>
+            <label><input type="checkbox" name="qualification" value="PG"> PG</label>
+        </div>
+
+        <div class="button-group">
+            <input class="button1" type="submit" value="Submit">
+            <input class="button2" type="reset" value="Clear">
+        </div>
+    </form>
+</body>
+
+</html>
